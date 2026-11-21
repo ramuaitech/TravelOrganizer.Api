@@ -1,7 +1,5 @@
 # Travel Organizer: AI + External APIs with .NET MAUI and ASP.NET Core
 
-[![CI](https://github.com/YOUR-USERNAME/TravelOrganizer/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/TravelOrganizer/actions)
-
 An LLM can't know today's weather in Denver. This project shows how to fix that: a **.NET MAUI** app sends a travel question to an **ASP.NET Core** backend, which fetches live data from an **external API**, hands it to an **AI model** as context, and returns a grounded recommendation.
 
 > Part of my **30-day Generative AI + .NET** series (Day 12: connecting AI with the real world through external APIs).
