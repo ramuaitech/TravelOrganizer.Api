@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TravelOrganizer.Contracts/TravelOrganizer.Contracts.csproj" />
+    <Project Path="src/TravelOrganizer.Api/TravelOrganizer.Api.csproj" />
+    <Project Path="src/TravelOrganizer.Maui/TravelOrganizer.Maui.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TravelOrganizer.Api.Tests/TravelOrganizer.Api.Tests.csproj" />
+  </Folder>
+</Solution>

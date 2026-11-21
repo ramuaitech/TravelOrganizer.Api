@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TravelOrganizer.Maui.ViewModels"
+             x:Class="TravelOrganizer.Maui.Views.MainPage"
+             x:DataType="vm:TravelAdviceViewModel"
+             Title="Travel Organizer">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="14">
+
+            <Label Text="Where are you going?" FontSize="18" FontAttributes="Bold" />
+            <Entry Text="{Binding Destination}" Placeholder="e.g. Denver" />
+
+            <Editor Text="{Binding Question}"
+                    Placeholder="Ask about your trip..."
+                    AutoSize="TextChanges"
+                    MinimumHeightRequest="90" />
+
+            <Button Text="Get advice" Command="{Binding GetAdviceCommand}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <Label Text="{Binding Error}" TextColor="Red" IsVisible="{Binding HasError}" />
+
+            <VerticalStackLayout IsVisible="{Binding HasResult}" Spacing="8">
+                <Label Text="{Binding LocationName}" FontSize="16" FontAttributes="Bold" />
+                <Label Text="{Binding WeatherSummary}" />
+                <Label Text="Recommendation" FontAttributes="Bold" Margin="0,8,0,0" />
+                <Label Text="{Binding Advice}" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
